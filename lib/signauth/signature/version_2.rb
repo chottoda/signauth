@@ -19,7 +19,11 @@ module Signauth
       end
 
       protected
-      
+
+      def version
+        "2"
+      end
+
       def validate_timestamp(skew)
         begin
           timestamp = Time.iso8601(params['timestamp'])

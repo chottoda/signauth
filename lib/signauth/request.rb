@@ -6,8 +6,8 @@ module Signauth
     attr_accessor :path
     attr_accessor :params
     
-    def initialize(signature_version = Signauth::Signature::Version1)
-      extend(signature_version)
+    def initialize(signature_version = 1)
+      extend(Signature.const_get("Version#{signature_version}"))
       @method = "GET"
       @host   = ""
       @path   = "/"
