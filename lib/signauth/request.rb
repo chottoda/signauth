@@ -1,18 +1,16 @@
 module Signauth
   class Request
 
-    attr_reader :method
-    attr_reader :host
-    attr_reader :path
-    attr_reader :params
+    attr_accessor :method
+    attr_accessor :host
+    attr_accessor :path
+    attr_accessor :params
+    attr_accessor :headers
     
-    def initialize(method, host, path, params, signature_version = 1)
-      sig_version = params['signature_version'] ||= signature_version
-      extend(Signature.const_get("Version#{sig_version}"))
-      @method = method
-      @host   = host
-      @path   = path
-      @params = params.dup
+    def initialize(signature_version = 0)
+      extend(Signature.const_get("Version#{signature_version}"))
+      @params  = {}
+      @headers = {}
     end
 
   end

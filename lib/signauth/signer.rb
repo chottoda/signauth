@@ -14,6 +14,13 @@ module Signauth
       OpenSSL::HMAC.digest(OpenSSL::Digest::Digest.new(digest), key, value)
     end
 
+    def slow_string_comparison(given, computed)
+      return false if given.nil? || computed.nil? || given.length != computed.length
+      match = true
+      computed.chars.each_with_index{|c, i| match &= c == given[i] }
+      match
+    end
+
     private
 
     def digest_name(algorithm)
