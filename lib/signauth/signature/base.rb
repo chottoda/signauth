@@ -1,3 +1,5 @@
+require 'uri'
+
 module Signauth
   module Signature
     module Base
@@ -23,7 +25,7 @@ module Signauth
       end
 
       def encoded(name, value)
-        "#{URI.escape(name)}=#{URI.escape(value)}"
+        "#{URI.escape(name.to_s)}=#{URI.escape(value.to_s)}"
       end
 
       def validate_timestamp(timestamp, skew)

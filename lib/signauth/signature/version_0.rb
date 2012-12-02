@@ -16,7 +16,7 @@ module Signauth
         scheme, access_key_id, given = authorization_parts 
         raise Errors::MissingSecurityHeader if scheme.nil? || access_key_id.nil? || given.nil?
 
-        credentials = yield(access_key_id)
+        credentials = yield(access_key_id, scheme)
         validate_signature(given, signature(credentials))
         true
       end
