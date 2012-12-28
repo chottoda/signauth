@@ -1,4 +1,5 @@
 require 'uri'
+require 'cgi'
 
 module Signauth
   module Signature
@@ -19,13 +20,13 @@ module Signauth
         [
           method.to_s.upcase,
           host.to_s.downcase,
-          path.to_s,
+          CGI.escape(path.to_s),
           params.sort.collect { |n, v| encoded(n, v) }.join('&'),
         ].join("\n")
       end
 
       def encoded(name, value)
-        "#{URI.escape(name.to_s)}=#{URI.escape(value.to_s)}"
+        "#{CGI.escape(name.to_s)}=#{CGI.escape(value.to_s)}"
       end
 
       def validate_timestamp(timestamp, skew)
