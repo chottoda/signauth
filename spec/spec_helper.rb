@@ -3,6 +3,7 @@ $:.unshift(File.dirname(__FILE__) + '/../lib')
 
 require 'rubygems'
 require 'rspec'
+require 'signauth'
 
 RSpec.configure do |config|
 
