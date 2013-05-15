@@ -20,6 +20,10 @@ Or install it yourself as:
 
 [Examples](https://github.com/arukoh/signauth/wiki/Examples)
 
+## Code Status
+
+* [![Build Status](https://travis-ci.org/arukoh/signauth.png?branch=master)](https://travis-ci.org/arukoh/signauth)
+
 ## Contributing
 
 1. Fork it
