@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "signauth"
   gem.require_paths = ["lib"]
   gem.version       = Signauth::VERSION
+  gem.license       = 'MIT'
 
   gem.add_development_dependency "rake", ">= 0.8.7"
   gem.add_development_dependency "rspec", ">= 2.4.0"
