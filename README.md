@@ -2,6 +2,10 @@
 
 Signature authentication.
 
+[![Gem Version](https://badge.fury.io/rb/signauth.svg)](http://badge.fury.io/rb/signauth)
+[![Build Status](https://travis-ci.org/arukoh/signauth.svg?branch=master)](https://travis-ci.org/arukoh/signauth)
+[![Dependency Status](https://gemnasium.com/arukoh/signauth.svg)](https://gemnasium.com/arukoh/signauth)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -19,10 +23,6 @@ Or install it yourself as:
 ## Examples
 
 [Examples](https://github.com/arukoh/signauth/wiki/Examples)
-
-## Code Status
-
-* [![Build Status](https://travis-ci.org/arukoh/signauth.png?branch=master)](https://travis-ci.org/arukoh/signauth)
 
 ## Contributing
 
