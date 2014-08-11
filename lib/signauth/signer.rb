@@ -11,7 +11,7 @@ module Signauth
 
     def hmac(key, value, algorithm = 'HMAC-SHA-256')
       digest = digest_name(algorithm)
-      OpenSSL::HMAC.digest(OpenSSL::Digest::Digest.new(digest), key, value)
+      OpenSSL::HMAC.digest(OpenSSL::Digest.new(digest), key, value)
     end
 
     def slow_string_comparison(given, computed)
