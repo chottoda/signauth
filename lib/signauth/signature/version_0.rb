@@ -28,7 +28,7 @@ module Signauth
       end
 
       def authorization_parts
-        match_data = headers['Authorization'].match(/^(\S+) (\S+):(\S+)/)
+        match_data = headers.env['Authorization'].match(/^(\S+) (\S+):(\S+)/)
         return nil unless match_data
         match_data[1, 3]
       end
